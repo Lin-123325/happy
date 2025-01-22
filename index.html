@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <title>Happy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpg" href="happy.jpg">
+    <script src="2.js" defer></script>
+    <script src="https://kit.fontawesome.com/bfcf12bee6.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+    <div id="date">正在載入日期...</div>
+    <div id="clock">正在載入時間...</div>
+
+    <div id="correct-password-message" class="password-message" style="display: none;">
+        <img src="happy.jpg"style="height: 50px"><p>😊 登入成功，歡迎！
+        <div class="con">
+            1.<input type="text" value="歡迎嘗試複製" id="myInput">
+            <button1 onclick="myFunction()"><i class="fa-regular fa-clone fa-fade fa-lg" style="color: #07e9ce;"></i></button1>
+            <br>
+            2.<a href="https://www.tssh.ntpc.edu.tw/ischool/news/attached/38867/113-2_%E8%B7%91%E7%8F%AD%E8%AA%B2%E7%A8%8B%E5%88%9D%E9%81%B8%E7%B5%90%E6%9E%9C(%E6%99%AE%E4%B8%80).pdf" target="_blank">113-2跑班課程初選結果名單公告(普一)</a><i class="fa-solid fa-link fa-lg" style="color: #07e9ce;"></i><i class="fa-solid fa-up-right-from-square" style="color: #07e9ce;"></i>
+        </div>
+        <br>
+        <button id="logout-btn"><i class="fa-solid fa-power-off fa-lg" style="color: #045ffb;"></i>登出</button>
+        <footer>
+            <d><i class="fa-regular fa-clone fa-fade fa-lg" style="color: #07e9ce;"></i>:複製按鈕</d>
+            <d><i class="fa-solid fa-link fa-lg" style="color: #07e9ce;"></i>:此段文字為超連結</d>
+            <d><i class="fa-solid fa-up-right-from-square" style="color: #07e9ce;"></i>:在新分頁中開啟</d>
+            <br>© 2025 每組密碼僅供本人使用
+            <br>本網站為實驗用，內容僅供參考
+        </footer>
+    </div>
+    
+    <div id="id01" class="modal">
+        <form class="modal-content animate" onsubmit="return checkPassword(event)">
+            <div class="container">
+                <h2> <img src="happy.jpg"style="height: 30px"> 登入</h2>
+                <label for="psw"><b>密碼</b></label>
+                <input type="password" placeholder="輸入密碼" name="psw" id="psw" required>
+    
+                <button type="submit">登入</button>
+            </div>
+    
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">取消登入</button>本網站為實驗用，內容僅供參考
+            </div>
+        </form>
+    </div>
+</body>
+</html>
