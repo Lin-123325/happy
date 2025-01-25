@@ -153,15 +153,70 @@ footer {
     top: 45px;
     right: 10px;
     font-size: 1.2rem;
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #000; /* 改為黑色文字 */
+    padding: 0; /* 移除內距 */
+    background: none; /* 移除背景框框 */
+    border-radius: 0; /* 移除圓角 */
+    box-shadow: none; /* 移除陰影 */
 }
 
 .con {
     display: inline-block; /* 確保容器大小適應內容 */
     text-align: left;      /* 內部文字自動對齊 */
     padding: 10px;
+}
+
+.header-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px; /* 設定圖片寬度 */
+    height: 200px; /* 設定圖片高度 */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5; /* 增加行距 */
+}
+
+.responsive-text {
+    display: none; /* 預設隱藏 */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+    font-size: 16px;
+    line-height: 1.5; /* 增加行距 */
+}
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        display: none; /* 隱藏圖片 */
+    }
+
+    .responsive-text {
+        display: block; /* 顯示替代文字 */
+    }
 }
